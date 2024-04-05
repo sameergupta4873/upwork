@@ -215,10 +215,6 @@ body {
   right: 45%;
 }
 
-.rating{
-    animation: zoomIn 1s;
-}
-
 @keyframes zoomIn {
   0% {
     transform: scale(0);

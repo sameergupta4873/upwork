@@ -15,10 +15,17 @@ let swiper = new Swiper(".mySwiper", {
 		img.classList.remove('zoom-in');
 	  });
 
+	  var allRating = document.querySelectorAll('.rating');
+	  allRating.forEach(function (rating) {
+		rating.classList.remove('zoom-in');
+	  }
+	  );
+
 	  // Add fade-in class to the active slide's image
 	  var activeSlideImage = this.slides[this.activeIndex].querySelector('img');
-	  console.log(activeSlideImage);
 	  activeSlideImage.classList.add('zoom-in');
+	  var activeRating = this.slides[this.activeIndex].querySelector('.rating');
+	  activeRating.classList.add('zoom-in');
 	}
   }
 });
