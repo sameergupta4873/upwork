@@ -39,6 +39,19 @@ let swiper = new Swiper(".mySwiper", {
 		void rating.offsetWidth;
 		rating.classList.add('zoom-in');
 	  });
+	  document.querySelectorAll(".img .slider-rating-left").forEach((rating) => {
+		rating.classList.remove('zoom-in');
+		// Trigger reflow to reset the animation
+		void rating.offsetWidth;
+		rating.classList.add('zoom-in');
+	  });
+	  document.querySelectorAll(".img img").forEach((img, idx) => {
+		var slide = [0, 1, 2];
+		// remove active index from slide
+		console.log(this.activeIndex);
+		slide = slide.filter((i) => i !== this.activeIndex);
+		img.src = `./images/user${slide[idx]+1}.jpg`;
+	  });
     },
   },
 });
