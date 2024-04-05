@@ -1,0 +1,228 @@
+/* Import google font (Balsamiq Sans) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Default anchor tag styling */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Body styling */
+html,
+body {
+  position: relative;
+  height: 100%;
+  color: #444;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  text-align: justify;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.header {
+  max-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.header .underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1rem 0;
+}
+
+.header .underline .line {
+  width: 5rem;
+  border: 1.5px solid rgb(241, 91, 21);
+  opacity: 0.45;
+}
+
+.header .underline .circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgb(241, 91, 21);
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.slider-img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.slider-image-animation{
+    animation: zoomIn 1s;
+}
+
+.container > div {
+  width: 60vw;
+}
+
+
+/* Swiper container stylng */
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.swiper-slide {
+  padding: 5rem 3rem;
+}
+
+.swiper-slide .slide {
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  border: rgba(241, 91, 21, 0.2) 1px solid;
+  position: absolute;
+  overflow: hidden;
+  background-color: #eee;
+  z-index: 1;
+  height: 75%;
+  width: 90%;
+  font-weight: 100;
+  padding: 6.5rem 5rem 1rem 5rem;
+}
+.swiper-slide .slide span {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.swiper-slide .slide p {
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.swiper-slide .rating {
+  position: absolute;
+  top: 2.5rem;
+  right: 0.5rem;
+  background-color: #eee;
+  border-radius: 50%;
+  height: 4.5rem;
+  width: 4.5rem;
+  border: 4px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.swiper-slide .rating-image-div {
+  border-radius: 50%;
+  position: absolute;
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+  z-index: 10;
+  transition: all 1s;
+}
+
+
+.swiper-slide .rating-image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.swiper-slide .rating .star {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  color: rgb(241, 91, 21);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 1s;
+}
+
+.swiper-button-next {
+  color: rgb(241, 91, 21);
+  position: absolute;
+  bottom: 2rem;
+  right: 45%;
+}
+
+.rating{
+    animation: zoomIn 1s;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
