@@ -32,6 +32,13 @@ let swiper = new Swiper(".mySwiper", {
 		void img.offsetWidth;
 		img.classList.add('zoom-in');
       });
+
+	  document.querySelectorAll(".img .slider-rating").forEach((rating) => {
+		rating.classList.remove('zoom-in');
+		// Trigger reflow to reset the animation
+		void rating.offsetWidth;
+		rating.classList.add('zoom-in');
+	  });
     },
   },
 });
