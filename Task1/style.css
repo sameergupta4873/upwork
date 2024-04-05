@@ -110,7 +110,7 @@ body {
 .img .slider-rating-left .star{
     position: absolute;
     top: 9px;
-    left: 9px;
+    right: 9px;
     color: rgb(241, 91, 21);
 }
 
