@@ -7,6 +7,20 @@ let swiper = new Swiper(".mySwiper", {
   delay: 3000,
   loop: true,
   slidesPerView: 1,
+  on: {
+	slideChange: function () {
+	  // Remove fade-in class from all images
+	  var allImages = document.querySelectorAll('.swiper-slide img');
+	  allImages.forEach(function (img) {
+		img.classList.remove('zoom-in');
+	  });
+
+	  // Add fade-in class to the active slide's image
+	  var activeSlideImage = this.slides[this.activeIndex].querySelector('img');
+	  console.log(activeSlideImage);
+	  activeSlideImage.classList.add('zoom-in');
+	}
+  }
 });
 swiper.autoplay.start();
 document.querySelector(".swiper-button-next").style.top = "80%";
